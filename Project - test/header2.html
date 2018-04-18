@@ -1,0 +1,167 @@
+<style>
+    @font-face {
+        font-family: "proxima-nova";
+        font-style: normal;
+        src: url("https://use.typekit.net/af/394be6/00000000000000003b9ad1b1/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/394be6/00000000000000003b9ad1b1/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/394be6/00000000000000003b9ad1b1/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+    }
+
+    .header-text {
+        margin-bottom: 0px;
+        color: white;
+    }
+
+    nav {
+        background: white;
+        width: 1320px;
+    }
+
+    .navbar {
+        border-radius: 0px;
+    }
+
+    /* .sticky {
+        position: fixed;
+        top: 0;
+    } */
+
+    .navbar-inverse {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .navbar-inverse .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .navbar-inverse .navbar-nav>li>a:hover {
+        color: rgb(2, 91, 150);
+        /* background-color: transparent; */
+        font-family: "proxima-nova", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        font-family: "proxima-nova", "Helvetica Neue", Arial, sans-serif;
+        padding: 10px 20px 10px 20px;
+    }
+
+    .po p {
+        margin-left: 0px;
+        padding-top: 0px;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+    }
+    .po li{
+        margin: 0px;
+        padding: 0px;
+    }
+</style>
+
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="navbar navbar-default" data-spy="affix" id="navbar">
+            <div class="col-md-9">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <a ng-href="#!/home">
+                            <img class="img-responsive" src="images/Logo.jpg" alt="logo">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul class="po nav navbar-nav navbar-left">
+                    <li>
+                        <p>{{ message }}
+                            <small>{{ username}}</small>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="col-md-9">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <a ng-href="#!/home">
+                            <!-- <img class="img-responsive" src="images/Logo.jpg" alt="logo"> -->
+                            <h1 class="header-text">Website Logo</h1>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul class="po nav navbar-nav navbar-right">
+                    <li>
+                        <p>Contact.No:
+                            <small>9822163574 / 9823988542</small>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Email:
+                            <small>ssenterprises198@gmail.com</small>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navWrap" class="collapse navbar-collapse">
+                <nav>
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#!/home">
+                                <span class="glyphicon glyphicon-home"></span> HOME</a>
+                        </li>
+                        <li>
+                            <a href="#!/services">
+                                <span class="glyphicon glyphicon-globe"></span> SERVICES</a>
+                        </li>
+                        <li>
+                            <a href="#!/about">
+                                <span class="glyphicon glyphicon-eye-open"></span> ABOUT US</a>
+                        </li>
+                        <li>
+                            <a href="#!/contact">
+                                <span class="glyphicon glyphicon-envelope"></span> CONTACT US</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // stick nav to top of page
+    // $(document).scroll(function () {
+    //     var y = $(this).scrollTop();
+    //     var navWrap = $('#navWrap').offset().top;
+    //     if (y > navWrap) {
+    //         $('nav').addClass('sticky');
+    //     } else {
+    //         $('nav').removeClass('sticky');
+    //     }
+    // });
+
+</script>

@@ -1,0 +1,548 @@
+<style>
+    @media (min-width: 280px) and (max-width: 480px) {
+        .client h2 {
+            text-align: center;
+            color: rgb(0, 108, 180);
+            font-size: 20px;
+        }
+
+        .content {
+            /* display: inline-block; */
+            margin-top: 0px;
+        }
+
+        .row .column {
+            padding: 0 8px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+        }
+        .col-xs-3 {
+            width: 33%;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            overflow: auto;
+            background-color: black;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        .modal-content img {
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 16px;
+            padding: 12px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:focus,
+        a:hover {
+            color: rgb(0, 108, 180);
+            text-decoration: none;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .cursor {
+            cursor: pointer
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+
+        img.hover-shadow {
+            transition: 0.3s;
+            margin: 5px;
+            padding: 0px;
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+        }
+        hr {
+            
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1;
+            border-top-width: 0px;
+            border-top-style: none;
+            border-top-color: currentcolor;
+            border-top: 1px solid rgb(199, 199, 199);
+        }
+    }
+
+    @media (min-width: 480px) and (max-width: 1600px) {
+        .client h2 {
+            text-align: center;
+            color: rgb(0, 108, 180);
+        }
+
+        .content {
+            /* display: inline-block; */
+            margin-top: 40px;
+        }
+
+        .row>.column {
+            padding: 0 8px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            /* width: 100%;
+        height: 100%; */
+            overflow: auto;
+            background-color: black;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            width: 80%;
+            max-width: 1000px;
+            /* height: 00px; */
+        }
+
+        .modal-content img {
+            height: 600px;
+            border-radius: 5px;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 16px;
+            padding: 12px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            position: absolute;
+            top: 80px;
+            right: 200px;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:focus,
+        a:hover {
+            color: rgb(0, 108, 180);
+            text-decoration: none;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .cursor {
+            cursor: pointer
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-size: 50px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .disp img {
+            padding: 10px;
+
+        }
+
+        .caption-container {
+            text-align: center;
+            background-color: black;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+
+        img.hover-shadow {
+            transition: 0.3s
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+        }
+
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            border-top-width: 0px;
+            border-top-style: none;
+            border-top-color: currentcolor;
+            border-top: 1px solid #e3e3e3;
+        }
+    }
+</style>
+
+<side ng-include="'/views/sidemenu.html'"></side>
+<div class="container-fluid">
+    <div class="content">
+        <div class="col-sm-9 col-lg-9">
+            <div class="client">
+                <h2>Photos of work done by SSEnterprises</h2>
+                <hr class="hr-or">
+            </div>
+            <div class="disp row">
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/9.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/10.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/11.jpg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/12.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/13.jpg" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/14.jpg" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/15.jpg" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/16.jpg" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/17.jpg" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/18.jpg" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/19.jpg" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/20.jpg" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
+                </div>
+                <div class='col-sm-3 col-xs-3 col-md-3 col-lg-3'>
+                    <img src="images/gallery/21.jpg" style="width:100%" onclick="openModal();currentSlide(21)" class="hover-shadow cursor">
+                </div>
+
+            </div>
+
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 21</div>
+                        <img src="images/gallery/1.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 21</div>
+                        <img src="images/gallery/2.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 21</div>
+                        <img src="images/gallery/3.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 21</div>
+                        <img src="images/gallery/4.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 21</div>
+                        <img src="images/gallery/5.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 21</div>
+                        <img src="images/gallery/6.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">7 / 21</div>
+                        <img src="images/gallery/7.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">8 / 21</div>
+                        <img src="images/gallery/8.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">9 / 21</div>
+                        <img src="images/gallery/9.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">10 / 21</div>
+                        <img src="images/gallery/10.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">11 / 21</div>
+                        <img src="images/gallery/11.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">12 / 21</div>
+                        <img src="images/gallery/12.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">13 / 21</div>
+                        <img src="images/gallery/13.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">14 / 21</div>
+                        <img src="images/gallery/14.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">15 / 21</div>
+                        <img src="images/gallery/15.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">16 / 21</div>
+                        <img src="images/gallery/16.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">17 / 21</div>
+                        <img src="images/gallery/17.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">18 / 21</div>
+                        <img src="images/gallery/18.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">19 / 21</div>
+                        <img src="images/gallery/19.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">20 / 21</div>
+                        <img src="images/gallery/20.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">21 / 21</div>
+                        <img src="images/gallery/21.jpg" style="width:100%">
+                    </div>
+
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openModal() {
+        document.getElementById('myModal').style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+</script>

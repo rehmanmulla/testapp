@@ -1,0 +1,230 @@
+<style>
+    @media (min-width: 280px) and (max-width: 480px) {
+        .col-xs-5 {
+
+            position: relative;
+            min-height: 1px;
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        .client h2 {
+            color: rgb(0, 108, 180);
+            font-size: 20px;
+            letter-spacing: 0;
+        }
+        .client {
+            text-align: center;
+        }
+
+        .row {
+            margin-right: -15px;
+            margin-left: 10px;
+        }
+
+        #cl1 img {
+            padding-bottom: 0px;
+            padding-left: 0%;
+            padding-right: 0%;
+            margin-top: 10px;
+        }
+
+        #cl1 h3 {
+            padding-bottom: 0px;
+            padding-left: 0%;
+            padding-right: 0%;
+            font-size: 14px;
+            margin: 10px 0 0 0px;
+        }
+
+        #cl1 h4 {
+            padding-bottom: 0px;
+            padding-left: 0%;
+            padding-right: 0%;
+            font-size: 14px;
+            margin: 10px 0 0 0px;
+        }
+
+        #cl2 h3 {
+            padding-bottom: 0px;
+            padding-left: 10%;
+            padding-right: 0%;
+            font-size: 14px;
+            margin: 10px 0 0 0px;
+        }
+
+        #cl2 h4 {
+            padding-bottom: 0px;
+            padding-left: 10%;
+            padding-right: 0%;
+            font-size: 14px;
+            margin: 10px 0 0 0px;
+        }
+
+        #cl2 img {
+            padding-bottom: 0px;
+            padding-left: 0%;
+            padding-right: 0%;
+            margin-top: 10px;
+        }
+
+        hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1;
+            border-top-width: 0px;
+            border-top-style: none;
+            border-top-color: currentcolor;
+            border-top: 1px solid rgb(199, 199, 199);
+        }
+    }
+
+    @media (min-width: 480px) and (max-width: 1600px) {
+        .client h2 {
+            color: rgb(0, 108, 180);
+            font-size: 30px;
+            letter-spacing: 0;
+            /* line-height: 30px; */
+            padding-top: 40px;
+        }
+
+        /* .card h3 h4 {
+        padding-top: 0px;
+    } */
+        .client {
+            text-align: center;
+        }
+
+        #cl1 img {
+            padding-bottom: 0px;
+            padding-left: 30%;
+            padding-right: 0%;
+        }
+
+        #cl1 h3 {
+            padding-bottom: 0px;
+            padding-left: 50%;
+            padding-right: 0%;
+        }
+
+        #cl1 h4 {
+            padding-bottom: 0px;
+            padding-left: 50%;
+            padding-right: 0%;
+        }
+
+        #cl2 h3 {
+            padding-bottom: 0px;
+            padding-left: 20%;
+            padding-right: 0%;
+        }
+
+        #cl2 h4 {
+            padding-bottom: 0px;
+            padding-left: 20%;
+            padding-right: 0%;
+        }
+
+        #cl2 img {
+            padding-bottom: 0px;
+            padding-left: 0%;
+            padding-right: 0%;
+        }
+
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 1;
+            border-top-width: 0px;
+            border-top-style: none;
+            border-top-color: currentcolor;
+            border-top: 1px solid rgb(199, 199, 199);
+        }
+    }
+</style>
+
+<side ng-include="'/views/sidemenu.html'"></side>
+
+<div class="container-fluid">
+    <div class="col-lg-9">
+        <div class="client">
+            <h2>Clients catered by SSEnterprises</h2>
+            <hr class="hr-or">
+        </div>
+        <div id="cl1" class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+                <div class="card">
+                    <img src="images/cl/berger.jpg" alt="" width="100%">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-5">
+                <div class="card">
+                    <h3>Services offered from</h3>
+                    <h4>2001 - 2012</h4>
+                    <h4>Location: Kundai</h4>
+                </div>
+            </div>
+        </div>
+        <hr class="hr-or">
+        <div id="cl2" class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-5">
+                <div class="card">
+                    <h3>Services offering from</h3>
+                    <h4>2005 - Till Date</h4>
+                    <h4>Location: Madkai</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+                <div class="card">
+                    <img src="images/cl/encube.jpg" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+        <hr class="hr-or">
+        <div id="cl1" class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+                <div class="card">
+                    <img src="images/cl/marriott.jpg" alt="" width="100%">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="card">
+                    <h3>Services offering from</h3>
+                    <h4>2014 - Till Date</h4>
+                    <h4>Location: Miramar</h4>
+                </div>
+            </div>
+        </div>
+        <hr class="hr-or">
+        <div id="cl2" class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-5">
+                <div class="card">
+                    <h3>Services offering from</h3>
+                    <h4>2001 - Till Date</h4>
+                    <h4>Location: Kundai</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+                <div class="card">
+                    <img src="images/cl/sun.jpg" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+        <hr class="hr-or">
+        <div id="cl1" class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+                <div class="card">
+                    <img src="images/cl/suvidha.jpg" alt="" width="100%">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-5">
+                <div class="card">
+                    <h3>Services offering from</h3>
+                    <h4>2008 - Till Date</h4>
+                    <h4>Location: Pune</h4>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
